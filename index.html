@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Capital</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <script src="./js/calculator.js" defer></script>
+</head>
+
+<body>
+  <header class="header container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">
+        <img src="./img/logo.svg" alt="Logo" class="nav__logo-img">
+        <p class="nav__logo-text">Vision Capital</p>
+      </a>
+      <div class="nav__pages">
+        <a href="#" class="nav__link">For Projects</a>
+        <a href="#" class="nav__link">For investors</a>
+        <button class="nav__registration-link" id="activator">Calculate your profit</button>
+        <div class="calculator__wrapper">
+          <form action="#" class="calculator" name="calculator">
+            <input type="text" class="calculator__screen" readonly autocomplete="off" id="screen">
+            <div class="calculator__buttons">
+              <div class="calculator__row">
+                <button class="calculator__button">7</button>
+                <button class="calculator__button">8</button>
+                <button class="calculator__button">9</button>
+                <button class="calculator__button" id="add">+</button>
+              </div>
+              <div class="calculator__row">
+                <button class="calculator__button">4</button>
+                <button class="calculator__button">5</button>
+                <button class="calculator__button">6</button>
+                <button class="calculator__button" id="subtract">-</button>
+              </div>
+              <div class="calculator__row">
+                <button class="calculator__button">1</button>
+                <button class="calculator__button">2</button>
+                <button class="calculator__button">3</button>
+                <button class="calculator__button" id="multyply">*</button>
+              </div>
+              <div class="calculator__row">
+                <button class="calculator__button" id="enter">=</button>
+                <button class="calculator__button">0</button>
+                <button class="calculator__button" id="clear">C</button>
+                <button class="calculator__button" id="divide">/</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <a href="#" class="nav__registration-link">Join now</a>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="intro container">
+      <h1 class="intro__heading">Vision Capital</h1>
+      <p class="intro__description">The right way to fund and incubate your DeFi startup</p>
+      <div class="intro__links">
+        <a href="#" class="link-button">I Need Funding</a>
+        <a href="#" class="link-button">Become an Investor</a>
+      </div>
+    </section>
+    <section class="pipeline container">
+      <h2 class="pipeline__heading">
+        In the pipeline
+      </h2>
+      <ul class="pipeline__companies">
+        <li class="pipeline__company"><img src="./img/pipeline_1.png" alt="company"></li>
+        <li class="pipeline__company"><img src="./img/pipeline_2.png" alt="company"></li>
+        <li class="pipeline__company"><img src="./img/pipeline_3.png" alt="company"></li>
+        <li class="pipeline__company"><img src="./img/pipeline_4.png" alt="company"></li>
+        <li class="pipeline__company"><img src="./img/pipeline_5.png" alt="company"></li>
+      </ul>
+    </section>
+    <section class="cons container">
+      <h2 class="heading-h2 cons__heading">Traditional Fundraising
+        <span class="text_accented">Doesn't Work</span>
+        in DeFi
+      </h2>
+      <ol class="cons__list">
+        <li class="cons__list-element">
+          <p class="cons__list-element-text">Without a big budget, it's hard to approach venture investors</p>
+        </li>
+        <li class="cons__list-element">
+          <p class="cons__list-element-text">VCs don't care about your DeFi idea – only their gains</p>
+        </li>
+        <li class="cons__list-element">
+          <p class="cons__list-element-text">They force you into selling your tokens at a huge discount…</p>
+        </li>
+        <li class="cons__list-element">
+          <p class="cons__list-element-text">...Then dump them at the first opportunity</p>
+        </li>
+        <li class="cons__list-element">
+          <p class="cons__list-element-text">Result: your token collapses. Everyone goes home.</p>
+        </li>
+      </ol>
+    </section>
+    <div class="vision__wrapper">
+      <section class="vision container">
+        <h2 class="heading-h2 vision__heading">Vision is the <span class="text_accented">answer</span></h2>
+        <p class="heading-description  vision__description">You have an idea, IncuPie has a plan. We offer everything
+          you need to go from an
+          early-stage idea to a successful exchange listing.</p>
+        <ul class="vision__list">
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Decentralized
+              investments</span>
+            <p class="vision__list-element-text">we'll distribute your tokens among our huge and active community</p>
+          </li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Access to professional
+              investors</span>
+            <p class="vision__list-element-text">we'll put you in touch with funds and business angels ready to invest
+              larger sums</p>
+          </li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Exchange relations</span>
+            <p class="vision__list-element-text">get better terms when listing your token</p>
+          </li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Staking</span>
+            <p class="vision__list-element-text">allow users to stake your tokens on DeFiPie and earn rewards</p>
+          </li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Product-market fit
+              analysis</span></li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Detailed tokenomics</span>
+          </li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Smart contract audit</span>
+          </li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Community-building and
+              social
+              media marketing</span></li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">White Paper, blog, and media
+              content from the best authors</span></li>
+        </ul>
+        <div class="vision__links">
+          <a href="#" class="link-button">I Need Funding</a>
+          <a href="#" class="link-button">Learn More</a>
+        </div>
+      </section>
+    </div>
+    <div class="potential__wrapper">
+      <section class="potential container">
+        <h2 class="heading-h2 potential__heading">Access <span class="text_accented">high-potential</span> DeFi startups
+          before everyone else</h2>
+        <ul class="vision__list">
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Low entry prices on DeFi
+              tokens</span></li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Fully decentralized</span>
+          </li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Only vetted projects that
+              passed our due diligence</span>
+          </li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">New projects every
+              month</span></li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">High chance of success
+              thanks to our incubation program</span></li>
+          <li class="vision__list-element"><span class="vision__list-element-text_accented">Yield farming rewards in PIE
+              <span class="text_accented">(up to 100% a year)</span></span></li>
+        </ul>
+        <div class="vision__links">
+          <a href="#" class="link-button">Become an Investor</a>
+        </div>
+      </section>
+      <section class="pie container">
+        <img class="pie__picture" src="./img/man_bg.png" alt="happy man picture" width="590" height="830">
+        <div class="pie__content">
+          <h2 class="heading-h2 pie__heading"><span class="text_accented">Brought to you</span> by DeFiPie</h2>
+          <p class="heading-description pie_description">DeFiPie is the first DeFi app to bring together crypto lending,
+            staking, P2P loans, liquidity mining, and trading. We have a strong development and marketing team and an
+            active, constantly growing community.</p>
+          <p class="heading-description pie_description">Project incubation is a natural next step: now that we've done
+            it ourselves, we want to help other quality projects to achieve success. </p>
+        </div>
+      </section>
+      <section class="pipeline container">
+        <h2 class="pipeline__heading pipeline__heading_wide">
+          Brought to you by DeFiPie in partnership with
+        </h2>
+        <ul class="pipeline__companies">
+          <li class="pipeline__company"><img src="./img/pie_1.png" alt="company"></li>
+          <li class="pipeline__company"><img src="./img/pie_2.png" alt="company"></li>
+          <li class="pipeline__company"><img src="./img/pie_3.png" alt="company"></li>
+          <li class="pipeline__company"><img src="./img/pie_4.png" alt="company"></li>
+          <li class="pipeline__company"><img src="./img/pie_5.png" alt="company"></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <section class="contacts container">
+      <h2 class="heading-h2 contacts__heading">
+        <span class="text_accented">Join</span><br>
+        Vision Capital and get funded
+      </h2>
+      <p class="heading-description contacts__description">We'll get back to you within 24 hours</p>
+      <div class="contacts__wrapper">
+        <form action="#" class="contacts__form" name="contacts">
+          <p class="contacts__form-field">
+            <label for="projectname" class="contacts__form-label">How is your project called?</label>
+            <input type="text" class="contacts__form-input" id="projectname" autocomplete="on">
+          </p>
+          <p class="contacts__form-field">
+            <label for="email" class="contacts__form-label">Your Email</label>
+            <input type="email" class="contacts__form-input" id="email" autocomplete="on">
+          </p>
+          <p class="contacts__form-field">
+            <label for="project_desctiption" class="contacts__form-label">Please tell us a few words about the
+              project</label>
+            <input type="text" class="contacts__form-input" id="project_desctiption" autocomplete="on">
+          </p>
+          <p class="contacts__form-field">
+            <label for="telegram" class="contacts__form-label">Telegram name</label>
+            <input type="text" class="contacts__form-input" id="telegram" autocomplete="on">
+          </p>
+          <input type="submit" value="Send" class="link-button contacts__form-submit-btn">
+        </form>
+        <div class="contacts__links">
+          <ul class="contacts__list">
+            <li class="contacts__list-element"><a href="#" class="contacts__list-link"></a></li>
+            <li class="contacts__list-element"><a href="#" class="contacts__list-link"></a></li>
+            <li class="contacts__list-element"><a href="#" class="contacts__list-link"></a></li>
+            <li class="contacts__list-element"><a href="#" class="contacts__list-link"></a></li>
+          </ul>
+          <address class="contacts__text-links">
+            <a href="#" class="contacts__text-link">hello@visioncapital.com</a>
+            <a href="#" class="contacts__text-link">Join us on Telegram</a>
+          </address>
+        </div>
+      </div>
+    </section>
+  </footer>
+</body>
+
+</html>

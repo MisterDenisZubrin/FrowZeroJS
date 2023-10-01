@@ -1,0 +1,639 @@
+// fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+// variables
+
+$purple: #8053ff;
+$background: #fbfaff;
+$darkpurple: #23155b;
+$grey: #928cab;
+$gray: #d4cdef;
+
+// mixins
+
+@mixin font($size, $weight, $lineheight, $color) {
+  font-size: $size;
+  font-family: "Poppins", sans-serif;
+  font-weight: $weight;
+  line-height: $lineheight;
+  color: $color;
+}
+
+// general styles
+
+body {
+  margin: 0;
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heading-h2 {
+  @include font(52px, 700, 64px, $darkpurple);
+  letter-spacing: 1.04px;
+}
+.heading-description {
+  @include font(18px, 400, 28px, $darkpurple);
+}
+
+.text_accented {
+  color: $purple;
+}
+
+.link-button {
+  width: 232px;
+  text-align: center;
+  padding: 12px 24px;
+  box-sizing: border-box;
+  margin: 0 10px 10px 0;
+  border: 1px solid $purple;
+  border-radius: 8px;
+  background-color: #fff;
+  @include font(18px, 500, 36px, $purple);
+
+  &:hover,
+  &:active {
+    background-color: $purple;
+    color: white;
+  }
+}
+
+.header {
+  padding: 24px 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: flex;
+
+    &-text {
+      @include font(18px, 700, 40px, $darkpurple);
+      margin-left: 12px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__pages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__link {
+    @include font(16px, 500, 28px, $darkpurple);
+    text-transform: capitalize;
+    margin: 0 12px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__registration-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    height: 48px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: $purple;
+    text-transform: capitalize;
+    @include font(16px, 500, 0px, #fff);
+    margin: 0 0 0 60px;
+    white-space: nowrap;
+
+    &:hover,
+    &:active {
+      background-color: #fff;
+      color: $purple;
+      outline: 1px solid $purple;
+    }
+  }
+}
+
+.intro {
+  background: url(../img/waves_bg_header1.png) bottom left no-repeat,
+    url(../img/waves_bg_header2.png) top right no-repeat;
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 168px;
+  padding-bottom: 168px;
+  min-height: 596px;
+  box-sizing: border-box;
+
+  &__heading {
+    text-align: center;
+    margin: 0;
+    @include font(64px, 700, 96px, $darkpurple);
+    width: 100%;
+  }
+
+  &__description {
+    text-align: center;
+    margin: 0 auto 40px;
+    @include font(24px, 400, 36px, $darkpurple);
+  }
+}
+
+.pipeline {
+  margin: 200px auto 0;
+  padding: 0 130px;
+  box-sizing: border-box;
+
+  &__heading {
+    text-align: center;
+    @include font(24px, 500, 36px, $darkpurple);
+    position: relative;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 2px;
+      top: 18px;
+      left: 0;
+      width: 40%;
+      background-color: #f4f5f4;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 2px;
+      top: 18px;
+      right: 0;
+      width: 40%;
+      background-color: #f4f5f4;
+    }
+  }
+
+  &__heading_wide {
+    text-align: center;
+    @include font(24px, 500, 36px, $darkpurple);
+    position: relative;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 2px;
+      top: 18px;
+      left: 0;
+      width: 25%;
+      background-color: #f4f5f4;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 2px;
+      top: 18px;
+      right: 0;
+      width: 25%;
+      background-color: #f4f5f4;
+    }
+  }
+
+  &__companies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 48px auto;
+  }
+}
+
+.cons {
+  display: flex;
+  margin: 200px auto;
+  padding: 0 130px;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  &__heading {
+    @include font(52px, 700, 64px, $darkpurple);
+    letter-spacing: 1.04px;
+    width: 33%;
+    height: 100%;
+    text-align: left;
+    margin: 0;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: li;
+
+    &-element {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 24px 24px 24px 61px;
+      box-sizing: border-box;
+      width: 580px;
+      min-height: 120px;
+      margin: 0 0 12px 0;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0px 14px 64px -4px rgba(35, 21, 91, 0.05),
+        0px 8px 12px -6px rgba(35, 21, 91, 0.05);
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 32px;
+        left: 30px;
+        width: 30px;
+        height: 30px;
+        counter-increment: li;
+        content: "0" counter(li);
+        @include font(24px, 700, 28px, $purple);
+      }
+
+      &-text {
+        margin: 0 150px 0 12px;
+        @include font(18px, 500, 28px, $darkpurple);
+      }
+    }
+  }
+}
+
+.vision {
+  padding: 200px 130px;
+  box-sizing: border-box;
+
+  &__wrapper {
+    border-radius: 250px 0px 0px 0px;
+    background: url(../img/wawes_bg_answer.png) top left no-repeat,
+      linear-gradient(180deg, #fbfaff 29.73%, #fff 100%);
+  }
+
+  &__heading {
+    position: relative;
+    margin: 0;
+
+    &::before {
+      position: absolute;
+      content: "— For Projects";
+      @include font(18px, 600, 28px, $purple);
+      top: -36px;
+      letter-spacing: 0;
+    }
+  }
+
+  &__description {
+    max-width: 616px;
+    width: 100%;
+    margin: 12px 0 40px;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    &-element {
+      padding: 24px 24px 24px 60px;
+      box-sizing: border-box;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 14px 64px -4px rgba(35, 21, 91, 0.05),
+        0px 8px 12px -6px rgba(35, 21, 91, 0.05);
+      margin: 0 0 20px 0;
+      max-width: 580px;
+      width: 100%;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: url(../img/UI/Tick.svg);
+        display: block;
+        top: 20px;
+        left: 24px;
+        width: 24px;
+        height: 24px;
+      }
+
+      &-text {
+        @include font(14px, 400, 24px, $grey);
+        margin: 0;
+
+        &_accented {
+          @include font(16px, 500, 0, $darkpurple);
+        }
+      }
+    }
+  }
+
+  &__links {
+    margin: 40px 0 0 0;
+  }
+}
+
+.potential {
+  padding: 200px 130px;
+  box-sizing: border-box;
+
+  &__heading {
+    position: relative;
+    margin: 0 0 40px;
+
+    &::before {
+      position: absolute;
+      content: "— For Investors";
+      @include font(18px, 600, 28px, $purple);
+      top: -36px;
+      letter-spacing: 0;
+    }
+  }
+
+  &__wrapper {
+    border-radius: 0px 250px 0px 0px;
+    background: url(../img/waves_bg_potential.png) top right no-repeat,
+      linear-gradient(180deg, #fbfaff 29.73%, #fff 100%);
+  }
+}
+
+.pie {
+  padding: 0 130px;
+  min-height: 1000px;
+  box-sizing: border-box;
+  background-image: url(../img/logo_pie_bg.png);
+  background-repeat: no-repeat;
+  background-position: 100px center;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  position: relative;
+
+  &__picture {
+    position: absolute;
+    left: -200px;
+    border-radius: 0px 200px 200px 0px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 580px;
+    margin: 0 120px 0 0;
+  }
+
+  &__heading {
+    position: relative;
+    max-width: 415px;
+    width: 100%;
+    margin: 0;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: -128px;
+      content: "";
+      background-image: url(../img/logo.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 104px;
+      height: 119px;
+    }
+  }
+}
+
+.footer {
+  margin: 200px 0 0 0;
+  background: url(../img/waves_bg_footer1.png) top left no-repeat,
+    url(../img/waves_bg_footer2.png) bottom right no-repeat $darkpurple;
+  border-radius: 250px 0 0 0;
+  min-height: 918px;
+}
+
+.contacts {
+  padding: 200px 130px;
+  box-sizing: border-box;
+
+  &__heading {
+    color: #fff;
+    margin: 0;
+    width: 437px;
+  }
+
+  &__description {
+    color: #d4cdef;
+    margin: 12px 0 64px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-field {
+      width: 340px;
+    }
+
+    &-label {
+      @include font(14px, 400, 24px, $gray);
+      width: 100%;
+    }
+
+    &-input {
+      border-radius: 8px;
+      border: 2px solid #f4f5f4;
+      background-color: #fff;
+      width: 100%;
+      height: 48px;
+      padding: 14px 12px;
+      box-sizing: border-box;
+      outline: none;
+      @include font(18px, 400, 14px, $darkpurple);
+    }
+
+    &-submit-btn {
+      margin: 40px 0 0 0;
+      background-color: $purple;
+      color: #fff;
+
+      &:hover,
+      &:active {
+        background-color: #fff;
+        color: $purple;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    max-width: 458px;
+    width: 100%;
+    justify-content: right;
+  }
+
+  &__list {
+    margin: 0 0 32px;
+    padding: 0;
+    max-width: 212px;
+    height: 32px;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+
+    &-element {
+      margin: 0 0 0 24px;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      &:nth-child(1) {
+        background: url(../img/UI/Facebook.png);
+      }
+
+      &:nth-child(2) {
+        background: url(../img/UI/Twitter.png);
+      }
+
+      &:nth-child(3) {
+        background: url(../img/UI/Telegram.png);
+      }
+
+      &:nth-child(4) {
+        background: url(../img/UI/Github.png);
+      }
+    }
+
+    &-link {
+      display: block;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+  }
+
+  &__text-links {
+    display: flex;
+    justify-content: space-around;
+    font-style: normal;
+  }
+
+  &__text-link {
+    @include font(14px, 500, normal, $gray);
+    text-decoration: underline;
+    display: block;
+    margin-left: 40px;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// calculator
+
+#activator {
+  border: none;
+  cursor: pointer;
+}
+
+.calculator {
+  position: absolute;
+  visibility: hidden;
+  top: 50px;
+  left: -360px;
+  width: 360px;
+  background-color: #fff;
+  padding: 30px;
+  border: 2px solid $purple;
+  box-sizing: border-box;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &_active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__screen {
+    display: block;
+    width: 100%;
+    margin: 0 auto 20px;
+    height: 50px;
+    outline: none;
+    border: 2px solid $purple;
+    box-sizing: border-box;
+    border-radius: 8px;
+    @include font(18px, 500, normal, $darkpurple);
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    text-align: right;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__row {
+    margin: 0 0 3px 0;
+  }
+  &__button {
+    width: 70px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid $purple;
+    box-sizing: border-box;
+    @include font(24px, 500, 24px, $darkpurple);
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      background-color: $purple;
+      color: #fff;
+      transform: scale(1.05);
+    }
+  }
+}
