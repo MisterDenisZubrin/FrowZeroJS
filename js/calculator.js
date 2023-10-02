@@ -95,12 +95,19 @@ function calculate(num1, num2, operator) {
 buttons.forEach((button) => {
   const content = button.textContent;
   if (button.id === "enter") {
-    button.addEventListener("click", () =>
-      calculate(firstNumber, memory, operator)
-    );
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      calculate(firstNumber, memory, operator);
+    });
   } else if (button.id === "clear") {
-    button.addEventListener("click", () => reset());
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      reset();
+    });
   } else {
-    button.addEventListener("click", () => setValue(content));
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      setValue(content);
+    });
   }
 });
