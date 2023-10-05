@@ -43,8 +43,22 @@ function setValue(content) {
     operator = content;
     screen.value += content;
   } else {
-    memory += content;
-    screen.value += content;
+    // Защита от 0 в начале числа
+    if (firstNumber === "" && content === "0" && memory === "0") {
+      firstNumber = 0;
+      screen.value = 0;
+      memory = "0";
+    } else {
+      if (!(content === "0" && memory === "0")) {
+        if (memory === "0" && content !== "0") {
+          memory = content;
+          screen.value = screen.value.slice(0, -1) + memory;
+        } else {
+          screen.value += content;
+          memory += content;
+        }
+      }
+    }
   }
 }
 
