@@ -503,6 +503,7 @@ body {
     max-width: 458px;
     width: 100%;
     justify-content: right;
+    font-style: normal;
   }
 
   &__list {
@@ -551,7 +552,6 @@ body {
   &__text-links {
     display: flex;
     justify-content: space-around;
-    font-style: normal;
   }
 
   &__text-link {
@@ -636,4 +636,75 @@ body {
       transform: scale(1.05);
     }
   }
+}
+
+// Медиа запросы
+// Планшет (width 768px)
+
+@media screen and (max-width: 768px) {
+  .nav {
+    &__logo {
+      margin: 0 0 0 15px;
+    }
+  }
+
+  .cons {
+    flex-direction: column;
+    align-items: center;
+
+    &__heading {
+      text-align: center;
+      width: 100%;
+      margin: 0 0 15px 0;
+    }
+  }
+
+  .pie {
+    &__picture {
+      width: 30%;
+      height: 30%;
+      left: initial;
+      right: 0;
+      border-radius: 75px 0 0 75px;
+    }
+  }
+
+  .contacts {
+    &__heading {
+      width: initial;
+      text-align: center;
+    }
+
+    &__description {
+      text-align: center;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__form {
+      justify-content: center;
+    }
+
+    &__links {
+      max-width: initial;
+      margin: 60px auto 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__text-links {
+      width: inherit;
+    }
+
+    &__text-link {
+      margin: 0;
+    }
+  }
+}
+
+// Телефон (max-width: 375px)
+
+@media screen and (max-width: 375px) {
 }

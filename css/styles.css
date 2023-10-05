@@ -590,6 +590,7 @@ body a {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
+  font-style: normal;
 }
 .contacts__list {
   margin: 0 0 32px;
@@ -638,7 +639,6 @@ body a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  font-style: normal;
 }
 .contacts__text-link {
   font-size: 14px;
@@ -738,4 +738,64 @@ body a {
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .nav__logo {
+    margin: 0 0 0 15px;
+  }
+  .cons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cons__heading {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  .pie__picture {
+    width: 30%;
+    height: 30%;
+    left: initial;
+    right: 0;
+    border-radius: 75px 0 0 75px;
+  }
+  .contacts__heading {
+    width: initial;
+    text-align: center;
+  }
+  .contacts__description {
+    text-align: center;
+  }
+  .contacts__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts__form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contacts__links {
+    max-width: initial;
+    margin: 60px auto 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contacts__text-links {
+    width: inherit;
+  }
+  .contacts__text-link {
+    margin: 0;
+  }
 }
