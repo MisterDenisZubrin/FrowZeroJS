@@ -1,22 +1,23 @@
 "use strict";
 
+const calculator = document.querySelector(".calculator");
+const screen = document.querySelector("#screen");
+const buttons = document.querySelectorAll(".calculator__button");
+
 // Button activator logic
 
 function toggleClass(target, targetClass) {
   target.classList.toggle(targetClass);
 }
 
-const calculator = document.querySelector(".calculator");
-document
-  .querySelector("#activator")
-  .addEventListener("click", () =>
-    toggleClass(calculator, "calculator_active")
-  );
+document.querySelector("#activator").addEventListener("click", () => {
+  toggleClass(calculator, "calculator_active");
+  if (calculator.classList.contains("calculator_active")) {
+    screen.focus();
+  }
+});
 
 // Calculator
-
-const screen = document.querySelector("#screen");
-const buttons = document.querySelectorAll(".calculator__button");
 
 let firstNumber = "",
   memory = "",
@@ -123,5 +124,41 @@ buttons.forEach((button) => {
       e.preventDefault();
       setValue(content);
     });
+  }
+});
+
+// Ввод с клавиатуры
+
+calculator.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === "=") {
+    e.preventDefault();
+    calculate(firstNumber, memory, operator);
+  } else if (e.key === ".") {
+    e.preventDefault();
+    reset();
+  } else if (
+    (e.key >= 0 && e.key <= 9) ||
+    e.key === "+" ||
+    e.key === "-" ||
+    e.key === "*" ||
+    e.key === "/"
+  ) {
+    e.preventDefault();
+    setValue(e.key);
+  }
+});
+
+// включение калькулятора через NumLock
+// Идея в том, чтобы можно было активировать калькулятор при включении NumLock и работать только с правой частью клавиатуры. По приколу
+// Ничего не мешает забиндить на другую клавишу, но нужно будет дополнительно включить проверку на расфокус, иначе при наборе текста в поле будет открываться калькулятор
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "NumLock" && e.getModifierState("NumLock") === true) {
+    e.preventDefault();
+    calculator.classList.add("calculator_active");
+    screen.focus();
+  } else if (e.key === "NumLock" && e.getModifierState("NumLock") === false) {
+    e.preventDefault();
+    calculator.classList.remove("calculator_active");
   }
 });
