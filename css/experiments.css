@@ -1,0 +1,39 @@
+.task__heading {
+  font-size: 28px;
+  text-align: center;
+}
+
+.task__description {
+  font-size: 20px;
+  text-align: center;
+}
+
+.code {
+  display: block;
+  margin: 40px auto;
+  width: 600px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 16px;
+  background-color: #111533;
+  color: white;
+}
+
+.label {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+
+.result {
+  padding: 5px 10px;
+  box-sizing: border-box;
+  font-size: 24px;
+  color: purple;
+}
+
+.quote {
+  font-style: italic;
+}

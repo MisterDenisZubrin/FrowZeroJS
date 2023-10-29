@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiments</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/experiments.css">
+  <script src="./js/calculator.js" defer></script>
+  <script src="./js/experiments.js" defer></script>
+</head>
+
+<body>
+  <header class="header container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">
+        <img src="./img/logo.svg" alt="Logo" class="nav__logo-img">
+        <p class="nav__logo-text">Vision Capital</p>
+      </a>
+      <div class="nav__pages">
+        <a href="./experiments.html" class="nav__link">For Projects</a>
+        <a href="#" class="nav__link">For investors</a>
+        <button class="nav__registration-link" id="activator">Calculate your profit</button>
+        <div class="calculator__wrapper">
+          <form action="#" class="calculator" name="calculator">
+            <input type="text" class="calculator__screen" readonly autocomplete="off" id="screen">
+            <div class="calculator__buttons">
+              <div class="calculator__row">
+                <button class="calculator__button">7</button>
+                <button class="calculator__button">8</button>
+                <button class="calculator__button">9</button>
+                <button class="calculator__button" id="add">+</button>
+              </div>
+              <div class="calculator__row">
+                <button class="calculator__button">4</button>
+                <button class="calculator__button">5</button>
+                <button class="calculator__button">6</button>
+                <button class="calculator__button" id="subtract">-</button>
+              </div>
+              <div class="calculator__row">
+                <button class="calculator__button">1</button>
+                <button class="calculator__button">2</button>
+                <button class="calculator__button">3</button>
+                <button class="calculator__button" id="multyply">*</button>
+              </div>
+              <div class="calculator__row">
+                <button class="calculator__button" id="enter">=</button>
+                <button class="calculator__button">0</button>
+                <button class="calculator__button" id="clear">C</button>
+                <button class="calculator__button" id="divide">/</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <a href="#" class="nav__registration-link">Join now</a>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="task">
+      <h2 class="task__heading">Задача 1</h2>
+      <p class="task__description">Реализовать методы <q class="quote">.plus .minus</q></p>
+      <code class="code">
+        console.log((2).plus(3).minus(1));
+      </code>
+      <div class="label">Результат: <span class="result" id="task1"></span></div>
+    </div>
+    <div class="task">
+      <h2 class="task__heading">Задача 2</h2>
+      <p class="task__description">Что будет выведено в консоль?
+        <code class="code">
+          <pre>
+          setTimeout(() => console.log('one'))
+
+          Promise.resolve().then(() => {
+            setTimeout(() => console.log('two'))
+          })
+
+          setTimeout(() => console.log('three'))
+
+          Promise.resolve().then(() => console.log('four'))
+
+          console.log('five')
+          </pre>
+        </code>
+      </p>
+      <div class="label">Результат:<span class="result" id="task2"></span></div>
+      
+    </div>
+    <div class="task">
+      <h2 class="task__heading">Задача 3</h2>
+      <p class="task__description">Реализовать функцию проверки правильности расположения скобок</p>
+        <code class="code">
+          <pre>
+            function checkBrackets(str = "") {
+              //
+            }
+            console.log(checkBrackets("{{}}")) //true
+            console.log(checkBrackets('{()}')) //true
+            console.log(checkBrackets("{{}")) //false
+            console.log(checkBrackets("{(})")) //false
+            console.log(checkBrackets("(){}")) //false
+          </pre>
+        </code>
+      <div class="label">Результат:<span class="result" id="task3"></span></div>
+      
+    </div>
+  </main>
+</body>
+
+</html>
