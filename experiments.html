@@ -106,6 +106,95 @@
       <div class="label">Результат:<span class="result" id="task3"></span></div>
       
     </div>
+    <div class="task">
+      <h2 class="task__heading">Задача 4</h2>
+      <p class="task__description">Написать мемоизирующую функцию, которая будет выполнять textPlainFunction для переданных значений
+      </p>
+        <code class="code">
+          <pre>
+            const textPlainFunction = (value) => {
+              const number = value.charCodeAt(0)
+              let converted_number = 0;
+              for(let i = 0; i< 99; i+=1) {
+                  if (i % 2 == 0)
+                      converted_number += i**2;
+                  else
+                      converted_number -= i**3;
+              }
+              return converted_number
+            };
+            
+            const memoFunction = () => {
+              textPlainFunction(value);
+            };
+            
+            
+            const memo = memoFunction();
+            
+            memo('a');
+            memo('b');
+            memo('a');
+            memo('a');
+            memo('c');
+            memo('d');
+          </pre>
+        </code>
+      <div class="label">Результат:<span class="result" id="task4"></span></div>
+      
+    </div>
+    <div class="task">
+      <h2 class="task__heading">Задача 5</h2>
+      <p class="task__description">Написать функцию, которая будет подсчитывать количество цветов в массиве
+      </p>
+        <code class="code">
+          <pre>
+            let colors = ['red', 'green', 'blue', 'yellow', 'green'];
+
+            const howMuchColors = (arr) => {}
+
+            const exampleObj = {
+                'red': 1,
+                'green': 2,
+                'blue': 1,
+                'yellow': 1
+            }
+
+            expect(howMuchColors(colors)).toBeEqual(exampleObj);
+          </pre>
+        </code>
+      <div class="label">Результат:<span class="result" id="task5"></span></div>
+    </div>
+    <div class="task">
+      <h2 class="task__heading">Задача 6</h2>
+      <p class="task__description">Написать функцию, которая будет подсчитывать количество цветов в массиве
+      </p>
+        <code class="code">
+          <pre>
+            const monthsToHuman = (date) => {}
+          
+            expect(months('1-01-2001')).toBeEqual('01 январь 2001');
+            expect(months('12-12-2012')).toBeEqual('12 декабрь 2012');
+          </pre>
+        </code>
+      <div class="label">Результат:<span class="result" id="task6"></span></div>
+    </div>
+    <div class="task">
+      <h2 class="task__heading">Задача 7</h2>
+      <p class="task__description">Реализовать метод getTotalSum, который складывает все цифры в числе
+      </p>
+        <code class="code">
+          <pre>
+            const myNuber = 52345;
+
+            const getTotalSum = () => {
+                
+            }
+
+            const value = myNuber.getTotalSum();
+          </pre>
+        </code>
+      <div class="label">Результат:<span class="result" id="task7"></span></div>
+    </div>
   </main>
 </body>
 
